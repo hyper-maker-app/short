@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok OAuth — Py Vids Ent</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0f0f12; color: #eee; max-width: 640px; margin: 40px auto; padding: 24px; }
+    .ok { color: #4ade80; } .err { color: #f87171; }
+    code, pre { background: #1a1a22; padding: 12px; border-radius: 8px; display: block; word-break: break-all; font-size: 14px; }
+    h1 { font-size: 1.4rem; }
+    p { color: #aaa; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>TikTok OAuth Callback</h1>
+  <div id="out"><p>Yükleniyor...</p></div>
+  <script>
+    const p = new URLSearchParams(location.search);
+    const code = p.get('code');
+    const err = p.get('error_description') || p.get('error');
+    const el = document.getElementById('out');
+    if (err) {
+      el.innerHTML = '<p class="err"><strong>Hata:</strong> ' + err + '</p>';
+    } else if (code) {
+      el.innerHTML =
+        '<p class="ok"><strong>Başarılı!</strong> Aşağıdaki kodu kopyala:</p>' +
+        '<pre id="c">' + code + '</pre>' +
+        '<p>Terminalde çalıştır:</p>' +
+        '<pre>python tiktok_auth.py --code "' + code + '"</pre>' +
+        '<p><button onclick="navigator.clipboard.writeText(document.getElementById(\'c\').textContent)">Kodu kopyala</button></p>';
+    } else {
+      el.innerHTML = '<p class="err">URL\'de code parametresi yok.</p>';
+    }
+  </script>
+</body>
+</html>
