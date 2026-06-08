@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Py Vids Ent</title>
+  <style>
+    :root { --bg: #0f0f12; --text: #e8e8ec; --muted: #9898a8; --accent: #fe2c55; }
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 1.6rem; margin-bottom: 8px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.1rem; margin: 28px 0 10px; color: #fff; }
+    p, li { color: var(--muted); margin-bottom: 12px; }
+    ul { padding-left: 1.4rem; margin-bottom: 16px; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #2a2a36; padding: 10px 12px; text-align: left; }
+    th { color: #fff; background: #1a1a22; }
+    td { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Py Vids Ent · Last updated: June 8, 2026</p>
+
+  <p>This Privacy Policy explains how <strong>Py Vids Ent</strong> ("the app") handles information when you authorize it to post to your TikTok account. The app is a personal desktop tool operated by the account owner, not a commercial multi-user service.</p>
+
+  <h2>1. Information we collect</h2>
+  <table>
+    <tr><th>Data</th><th>Purpose</th><th>Stored where</th></tr>
+    <tr><td>TikTok OAuth tokens (access / refresh)</td><td>Publish videos on your behalf</td><td>Local .env file on your PC only</td></tr>
+    <tr><td>TikTok open_id / display name</td><td>Identify connected account</td><td>Local .env / config on your PC</td></tr>
+    <tr><td>Video files & metadata</td><td>Create and upload posts</td><td>Local project folders on your PC</td></tr>
+    <tr><td>App credentials (client key/secret)</td><td>TikTok API authentication</td><td>Local .env on your PC only</td></tr>
+  </table>
+  <p>We do <strong>not</strong> operate a cloud server that stores your TikTok password. Login happens through TikTok's official OAuth flow in your browser.</p>
+
+  <h2>2. How we use information</h2>
+  <ul>
+    <li>Upload and publish videos you generate to your authorized TikTok account.</li>
+    <li>Refresh API tokens so publishing continues without repeated logins.</li>
+    <li>Schedule posts at times you configure locally.</li>
+  </ul>
+  <p>We do not sell, rent, or share your personal data with third parties for marketing.</p>
+
+  <h2>3. Third-party services</h2>
+  <ul>
+    <li><strong>TikTok</strong> — Content Posting API; subject to <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener">TikTok Privacy Policy</a>.</li>
+    <li><strong>YouTube</strong> (optional) — if you also use the same project for YouTube uploads, Google OAuth applies separately.</li>
+    <li><strong>GitHub</strong> — hosts this legal documentation page only; no user data is sent here by the app.</li>
+  </ul>
+
+  <h2>4. Data retention</h2>
+  <ul>
+    <li>OAuth tokens remain on your device until you delete them or revoke app access in TikTok settings.</li>
+    <li>Generated videos remain in local output folders until you delete them.</li>
+    <li>Revoking TikTok app access invalidates tokens; delete local .env entries if you stop using the app.</li>
+  </ul>
+
+  <h2>5. Your rights</h2>
+  <p>You can:</p>
+  <ul>
+    <li>Revoke app access anytime in TikTok → Settings → Security → Manage app permissions.</li>
+    <li>Delete local video files and token files from your computer.</li>
+    <li>Request information about stored data by contacting the Creator via GitHub issues.</li>
+  </ul>
+  <p>If you are in the EEA/UK, you may have additional rights under GDPR (access, erasure, portability). Contact us to exercise them.</p>
+
+  <h2>6. Security</h2>
+  <p>Tokens and secrets are stored locally in environment files that are excluded from public repositories. Do not share your .env file or commit it to Git. Use strong device login protection on the computer running the app.</p>
+
+  <h2>7. Children</h2>
+  <p>The app is not directed at children under 13. We do not knowingly collect data from children. TikTok's minimum age rules apply.</p>
+
+  <h2>8. Changes</h2>
+  <p>We may update this policy. The "Last updated" date will reflect changes. Material changes will be noted in the project README.</p>
+
+  <h2>9. Contact</h2>
+  <p>Privacy questions: <a href="https://github.com/hyper-maker-app/short/issues">github.com/hyper-maker-app/short/issues</a></p>
+
+  <p><a href="index.html">← Back to home</a> · <a href="terms.html">Terms of Service</a></p>
+</body>
+</html>
